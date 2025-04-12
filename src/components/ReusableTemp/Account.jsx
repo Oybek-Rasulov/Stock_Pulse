@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import Toggle from "./toggle";
+import Toggle from "./Toggle";
 import assets from "../assets";
 import { Link } from 'react-router-dom';
 
