@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { useStockContext } from '../../context/StockDataContext';
+import { useStockContext } from '../../Context/StockDataContext';
 import assets from '../assets';
 
 function StocksTemp({ stockSearchData }) {
