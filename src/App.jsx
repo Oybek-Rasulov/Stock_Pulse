@@ -1,6 +1,4 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Register from "./pages/Register";
-import Login from "./pages/Login";
 import ForgetPassword from "./pages/ForgetPassword";
 import NotFound from "./pages/NotFound";
 import Home from "./pages/Home";
@@ -11,7 +9,6 @@ import SignUp from "./pages/SignUp";
 import Tools from "./pages/Tools";
 import InvestmentInsights from "./pages/InvestmentInsights";
 import { StockProvider } from './context/StockDataContext';
-
 
 export default function App() {
   return <>

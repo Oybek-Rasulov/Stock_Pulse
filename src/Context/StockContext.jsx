@@ -5,7 +5,7 @@ const StockContext = createContext();
 const apiKey = "accWUCnRtb63IfVNN3CsFB8nIF9kBgmw";
 
 
-export const StockProvider = ({ children }) => {
+export const StockDataProvider = ({ children }) => {
   const [stockSymbol, setStockSymbol] = useState('AAPL'); // Default symbol
   const [stockData, setStockData] = useState(null);
   const [loading, setLoading] = useState(true);
