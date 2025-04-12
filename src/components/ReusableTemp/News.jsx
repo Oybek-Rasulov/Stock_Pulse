@@ -51,7 +51,7 @@ function News({searchData}) {
 
     async function saveNews(data) {
         try {
-            await axios.post("http://localhost:3001/saveNews", {newsData: data});
+            await axios.post("https://stockpulsebackend.onrender.com/saveNews", {newsData: data});
         }catch(err) {
             console.log(err)
         }

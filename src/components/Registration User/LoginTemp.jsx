@@ -20,7 +20,7 @@ export default function LoginTemp() {
         // try {
             const storedCredentials = JSON.parse(localStorage.getItem("user"))
             console.log(storedCredentials);
-            await axios.post("http://localhost:3001/login", ...storedCredentials)
+            await axios.post("https://stockpulsebackend.onrender.com/login", ...storedCredentials)
                 .then(res => console.log(res))
             
             // console.log(res.data)

@@ -23,7 +23,7 @@ export default function RegisterTemp() {
         e.preventDefault();
 
         try {
-            const res = await axios.post("http://localhost:3001/register", userDetails);
+            const res = await axios.post("https://stockpulsebackend.onrender.com/register", userDetails);
             setResMessage(res.data.message);
             if(res.data.message === "Muvafaqqiyatli ro'yxatdan o'tdingiz!") {
                 if(isChecked === true) {
