@@ -1,6 +1,6 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-const StockContext = createContext();
+const StockDataContext = createContext();
 
 const apiKey = "accWUCnRtb63IfVNN3CsFB8nIF9kBgmw";
 
@@ -37,10 +37,10 @@ export const StockDataProvider = ({ children }) => {
   }, [stockSymbol]); // 👈 this MUST be here to refetch on change
 
   return (
-    <StockContext.Provider value={{ stockSymbol, setStockSymbol, stockData, loading }}>
+    <StockDataContext.Provider value={{ stockSymbol, setStockSymbol, stockData, loading }}>
       {children}
-    </StockContext.Provider>
+    </StockDataContext.Provider>
   );
 };
 
-export const useStock = () => useContext(StockContext);
+export const useStock = () => useContext(StockDataContext);

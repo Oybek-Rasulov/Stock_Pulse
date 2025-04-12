@@ -8,11 +8,11 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Tools from "./pages/Tools";
 import InvestmentInsights from "./pages/InvestmentInsights";
-import { StockProvider } from './context/StockDataContext';
+import { StockDataProvider } from './context/StockDataContext';
 
 export default function App() {
   return <>
-      <StockProvider>
+      <StockDataProvider>
         <Routes>
           <Route path="/register" element={<SignUp />} />
           <Route path="/login" element={<SignIn />} />
@@ -25,6 +25,6 @@ export default function App() {
           <Route path="/charts" element={<Tools />} />          
           <Route path="/insights" element={<InvestmentInsights />} />          
         </Routes>
-      </StockProvider>
+      </StockDataProvider>
     </>
 }
