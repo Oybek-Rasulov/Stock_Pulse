@@ -11,7 +11,7 @@ const symbols = [
   "COST", "WMT", "XOM", "GS", "NKE"
 ];
 
-export const StockProvider = ({ children }) => {
+export const StockDataProvider = ({ children }) => {
   const [stocks, setStocks] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");

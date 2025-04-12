@@ -1,11 +1,11 @@
 import React, { createContext, useContext, useState, useEffect } from 'react';
 
-const StockDataContext = createContext();
+const StockContext = createContext();
 
 const apiKey = "accWUCnRtb63IfVNN3CsFB8nIF9kBgmw";
 
 
-export const StockDataProvider = ({ children }) => {
+export const StockProvider = ({ children }) => {
   const [stockSymbol, setStockSymbol] = useState('AAPL'); // Default symbol
   const [stockData, setStockData] = useState(null);
   const [loading, setLoading] = useState(true);
@@ -37,10 +37,10 @@ export const StockDataProvider = ({ children }) => {
   }, [stockSymbol]); // 👈 this MUST be here to refetch on change
 
   return (
-    <StockDataContext.Provider value={{ stockSymbol, setStockSymbol, stockData, loading }}>
+    <StockContext.Provider value={{ stockSymbol, setStockSymbol, stockData, loading }}>
       {children}
-    </StockDataContext.Provider>
+    </StockContext.Provider>
   );
 };
 
-export const useStock = () => useContext(StockDataContext);
+export const useStock = () => useContext(StockContext);
