@@ -8,7 +8,7 @@ import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
 import Tools from "./pages/Tools";
 import InvestmentInsights from "./pages/InvestmentInsights";
-import { StockDataProvider } from "./context/StockDataContext";
+import { StockDataProvider } from "./Context/StockDataContext";
 
 export default function App() {
   return <>
