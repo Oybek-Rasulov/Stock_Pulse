@@ -21,7 +21,7 @@ function News({searchData}) {
     useEffect(() => {
         async function fetchNews() {
           try {
-            const res = await axios.get('http://localhost:3001/api/news');
+            const res = await axios.get('https://stockpulsebackend.onrender.com/api/news');
       
             // Sort by newest date
             const sorted = res.data.articles.sort((a, b) => {
